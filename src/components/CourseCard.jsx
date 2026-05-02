@@ -1,4 +1,4 @@
-import { Card } from "@heroui/react";
+import { Button, Card } from "@heroui/react";
 import Image from "next/image";
 
 const CourseCard = ({ course }) => {
@@ -7,19 +7,19 @@ const CourseCard = ({ course }) => {
     <div className="">
       {/* 1 */}
       <Card className="bg-gray-100 rounded-2xl gap-4" variant="transparent">
-        <div className="relative w-full h-48">
+        <div className="relative w-full aspect-square h-48">
           <Image
             src={course.image}
-            height={200}
-            width={300}
+            fill={true}
+           
             alt="course image"
             className="object-cover rounded-xl"
           />
         </div>
         <h1 className="text-2xl font-bold">{course.title}</h1>
         <p>{course.instructor}</p>
-        <p>{course.level}</p>
         <p>{course.rating}</p>
+        <Button  className="w-full text-xl font-medium">View Details</Button>
       </Card>
     </div>
   );
