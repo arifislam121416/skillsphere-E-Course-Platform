@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch using modern tools.",
-    "image": "https://i.ibb.co.com/dsLfPXVy/imgi-129-6346777-5b47-2.jpg",
+    "image": "https://i.ibb.co.com/0j5RCsZX/imgi-138-maxresdefault.jpg",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Build scalable web apps using React, Next.js, and modern patterns.",
-    "image": "https://i.ibb.co.com/gZfKZyLS/imgi-27-default.png",
+    "image": "https://look.jmgbb.com/images/V1jaW6CLyr.jpg",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Learn design principles, wireframing, and prototyping.",
-    "image": "https://i.ibb.co.com/dsLfPXVy/imgi-129-6346777-5b47-2.jpg",
+    "image": "https://look.jmgbb.com/images/HhzxaC1_VN.jpg",
     "category": "Design"
   },
   {
@@ -37,10 +37,10 @@
     "title": "Data Science with Python",
     "instructor": "Michael Smith",
     "duration": "25 hours",
-    "rating": 4.8,
+    "rating": 4.3,
     "level": "Intermediate",
     "description": "Analyze data, visualize insights, and build ML models.",
-    "image": "https://i.ibb.co.com/VY9zsVfW/imgi-26-default.png",
+    "image": "https://look.jmgbb.com/images/LMkT6kS50F.jpg",
     "category": "Data Science"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Master SEO, social media marketing, and online branding.",
-    "image": "https://i.ibb.co.com/LDgGh9Tb/imgi-10-default.png",
+    "image": "https://look.jmgbb.com/images/vdSWjO70Xf.jpg",
     "category": "Marketing"
   },
   {
@@ -62,18 +62,8 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Learn how to protect systems and networks from cyber threats.",
-    "image": "https://i.ibb.co.com/tjgmd98/imgi-218-image-11.png",
+    "image": "https://look.jmgbb.com/images/gV3omALiPW.jpg",
     "category": "Security"
-  },
-  {
-    "id": 7,
-    "title": "Mobile App Development with Flutter",
-    "instructor": "Ravi Patel",
-    "duration": "22 hours",
-    "rating": 4.8,
-    "level": "Intermediate",
-    "description": "Build cross-platform mobile apps using Flutter and Dart.",
-    "image": "https://i.postimg.cc/3Jr3tP1X/flutter.png",
-    "category": "Development"
   }
+ 
 ]

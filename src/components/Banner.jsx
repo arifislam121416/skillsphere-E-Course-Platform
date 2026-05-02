@@ -9,9 +9,9 @@ const Banner = async() => {
     const courseData = data.slice(0,3)
 
   return (
- <div>
-  <h1>Top Course</h1>
-  <div>
+ <div className="container mx-auto">
+  <h1 className="text-4xl font-bold my-4">Top Course</h1>
+  <div className="gap-4 mt-4 bg-gray-200 py-10 grid lg:grid-cols-3 md:grid-cols-2">
     {
       courseData.map(course => <CourseCard key={course.id} course={course}/>)
     }

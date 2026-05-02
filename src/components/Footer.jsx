@@ -24,21 +24,18 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Image
-                src="/logo.png"
-                alt="pixgen logo"
+                src="/skillsphare.png"
+                alt="skillsphere logo"
                 width={32}
                 height={32}
                 className="dark:brightness-200"
               />
               <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
-                pixgen
+                SkillSphere
               </h2>
             </div>
 
-            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
-              Create production-ready AI visuals in seconds. Built for speed,
-              scale, and creativity.
-            </p>
+            
           </div>
 
           {/* Product */}
@@ -52,7 +49,7 @@ const Footer = () => {
                   href="/generate"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Generate
+                  Home
                 </Link>
               </li>
               <li>
@@ -60,7 +57,7 @@ const Footer = () => {
                   href="/all-photos"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Gallery
+                  Course
                 </Link>
               </li>
               <li>
@@ -68,7 +65,7 @@ const Footer = () => {
                   href="/pricing"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Pricing
+                 All Course
                 </Link>
               </li>
             </ul>
@@ -134,7 +131,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} skillsphere. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link
