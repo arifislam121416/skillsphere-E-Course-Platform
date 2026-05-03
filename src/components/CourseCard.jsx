@@ -1,5 +1,6 @@
 import { Button, Card } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CourseCard = ({ course }) => {
   console.log(course);
@@ -18,8 +19,11 @@ const CourseCard = ({ course }) => {
         </div>
         <h1 className="text-2xl font-bold">{course.title}</h1>
         <p>{course.instructor}</p>
-        <p>{course.rating}</p>
-        <Button  className="w-full text-xl font-medium">View Details</Button>
+        <p>⭐{course.rating}</p>
+        {/* href={`/courses/${course.id}`} */}
+       <Link href={"/sign-up"}>
+       <Button className="mt-2 w-full bg-blue-500 text-white px-3 py-1 rounded-full">View Details</Button>
+       </Link>
       </Card>
     </div>
   );

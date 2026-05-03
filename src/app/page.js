@@ -1,9 +1,11 @@
-import Banner from "@/components/Banner";
+
 import CourseCard from "@/components/CourseCard";
+import { ToastContainer } from "react-toastify";
 
 
 export default async function Home() {
       const res = await fetch("https://skillsphere-e-course-platform.vercel.app/data.json")
+      console.log(res,"res ashse go");
     const courses = await res.json()
       const popular = [...courses]
     .sort((a, b) => b.rating - a.rating)
@@ -28,6 +30,7 @@ export default async function Home() {
         ))}
       </div>
     </div>
+    <ToastContainer />
    </div>
   );
 }

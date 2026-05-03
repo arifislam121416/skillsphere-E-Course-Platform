@@ -1,12 +1,13 @@
-import { Button, Card } from "@heroui/react";
-import Image from "next/image";
 import CourseCard from "./CourseCard";
+
+
 
 
 const Banner = async() => {
     const res = await fetch("https://skillsphere-e-course-platform.vercel.app/data.json")
     const data = await res.json()
     const courseData = data.slice(0,3)
+    console.log(courseData,"banner data ashse");
 
   return (
  <div className="container mx-auto">
