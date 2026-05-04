@@ -27,17 +27,17 @@ const Navbar = () => {
             <Link href={"/courses"}>Courses</Link>
           </li>
           <li>
-            <Link href={"/myprofile"}>My Profile</Link>
+            <Link href={"/profile"}>My Profile</Link>
           </li>
         </ul>
 
         <div className="flex gap-4">
           <ul className="flex items-center gap-4 text-sm">
             <li>
-              <Link href={"/signup"}>Register</Link>
+              <Link href={"/sign-up"}>Register</Link>
             </li>
             <li>
-              <Link href={"/signin"}>Login</Link>
+              <Link href={"/sign-in"}>Login</Link>
             </li>
           </ul>
         </div>

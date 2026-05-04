@@ -1,11 +1,14 @@
 
 import CourseCard from "@/components/CourseCard";
+import LearningTips from "@/components/LearningTips";
+import TopInstructors from "@/components/TopInstructors";
+import TrendingCourses from "@/components/TrendingCourses";
 import { ToastContainer } from "react-toastify";
 
 
 export default async function Home() {
       const res = await fetch("https://skillsphere-e-course-platform.vercel.app/data.json")
-      console.log(res,"res ashse go");
+     
     const courses = await res.json()
       const popular = [...courses]
     .sort((a, b) => b.rating - a.rating)
@@ -13,7 +16,7 @@ export default async function Home() {
     
   return (
    <div>
-    <div>
+    <div className="items-center">
       
       <div className="text-center py-10">
         <h1 className="text-4xl font-bold">
@@ -22,7 +25,10 @@ export default async function Home() {
       </div>
 
       
-      <h2 className="text-2xl mb-4">🔥 Popular Courses</h2>
+      <div className="flex justify-between items-center">
+        <h2 className="text-2xl md:text-3xl font-bold">🔥 Popular Courses</h2>
+      <TrendingCourses/>
+      </div>
 
       <div className="grid md:grid-cols-3 gap-4">
         {popular.map((course) => (
@@ -30,6 +36,8 @@ export default async function Home() {
         ))}
       </div>
     </div>
+    <LearningTips/>
+    <TopInstructors/>
     <ToastContainer />
    </div>
   );

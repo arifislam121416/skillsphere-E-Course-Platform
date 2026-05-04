@@ -1,3 +1,4 @@
+import AllCoursesClient from '@/components/AllCoursesClient';
 import CourseCard from '@/components/CourseCard';
 import React from 'react';
 
@@ -7,6 +8,7 @@ const CoursesPage =async () => {
     return (
         <div className='bg-gray-200 p-3 rounded'>
             <h1 className='text-4xl font-bold'>All Course</h1>
+            <AllCoursesClient courses={AllCourse}/>
             <div className="gap-4 mt-4  py-10 grid lg:grid-cols-3 md:grid-cols-2">
 {
     AllCourse.map(course => <CourseCard key={course.id} course={course}/>)

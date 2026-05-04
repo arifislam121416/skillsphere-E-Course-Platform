@@ -21,7 +21,7 @@ const CourseCard = ({ course }) => {
         <p>{course.instructor}</p>
         <p>⭐{course.rating}</p>
         {/* href={`/courses/${course.id}`} */}
-       <Link href={"/signup"}>
+       <Link href={"/sign-up"}>
        <Button className="mt-2 w-full bg-blue-500 text-white px-3 py-1 rounded-full">View Details</Button>
        </Link>
       </Card>
