@@ -18,6 +18,7 @@ const LoginPage = () => {
       
         email: form.get("email"),
         password: form.get("password"),
+        callbackURL:"/"
       });
 
       toast.success("Login successful ✅");
@@ -48,11 +49,11 @@ const LoginPage = () => {
         required
       />
 
-     <Link href={"/myprofile"}>
+     
       <button className="bg-blue-500 text-white p-2 w-full rounded-full">
        Login
       </button>
-     </Link>
+    
 
       <button
         type="button"
@@ -66,7 +67,7 @@ const LoginPage = () => {
 
       <p className="mt-3 text-center">
         Already have an account?{" "}
-        <Link href={"/signup"} className="text-blue-500">
+        <Link href={"/sign-up"} className="text-blue-500">
           Logout
         </Link>
       </p>

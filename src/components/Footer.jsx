@@ -1,5 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+
 
 const Footer = () => {
   return (
@@ -106,23 +107,28 @@ const Footer = () => {
 
           {/* CTA Block */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-black dark:text-white">
-              Start creating
-            </h3>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Generate your first AI image today.
-            </p>
-
-            <Link
-              href="/sign-up"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-black text-white dark:bg-white dark:text-black 
-              text-sm font-medium transition-all duration-200 
-              hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
-            >
-              Get Started
-            </Link>
+            
+             
+             <h1 className="text-xl font-bold">Social Link</h1>
+           <div className="flex gap-4">
+            <Image
+                src="/logo-facebook.svg"
+                alt="skillsphere logo"
+                width={32}
+                height={32}
+                className="bg-blue-300 p-1 rounded-full text-white"
+              />
+            <Image
+                src="/circle-play-fill.svg"
+                alt="skillsphere logo"
+                width={32}
+                height={32}
+                className="bg-red-300 p-1 rounded-full"
+              />
+              <p className="bg-black text-white p-1 rounded-full">x</p>
+           
+           </div>
           </div>
         </div>
 
