@@ -20,18 +20,17 @@ const LoginPage = () => {
       await authClient.signIn.email({
         email: form.get("email"),
         password: form.get("password"),
-        callbackURL: redirect, // 🔥 dynamic redirect
+        callbackURL: redirect, 
       });
 
       toast.success("Login successful ✅");
 
-      // ❌ router.push দরকার নেই (callbackURL handle করবে)
+     
     } catch (error) {
       console.error(error);
       toast.error("Login failed ❌");
     }
   };
-
   return (
     <form
       onSubmit={handleLogin}
