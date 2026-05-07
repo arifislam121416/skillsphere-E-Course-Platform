@@ -1,6 +1,7 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
+import { google } from "better-auth";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
@@ -31,6 +32,13 @@ const LoginPage = () => {
       toast.error("Login failed ❌");
     }
   };
+
+  const handleGoogleSignin = async ()=> {
+    await authClient.signIn.social({
+      provider: 'google'
+    })
+
+  }
   return (
     <form
       onSubmit={handleLogin}
@@ -57,15 +65,10 @@ const LoginPage = () => {
       <button className="bg-blue-500 text-white p-2 w-full rounded-full">
         Login
       </button>
-
+<p className="text-2xl my-2 text-center">Or,</p>
       <button
         type="button"
-        onClick={() =>
-          authClient.signIn.social({
-            provider: "google",
-            callbackURL: redirect,
-          })
-        }
+        onClick={handleGoogleSignin}
         className="border rounded-full p-2 w-full mt-2"
       >
         Continue with Google

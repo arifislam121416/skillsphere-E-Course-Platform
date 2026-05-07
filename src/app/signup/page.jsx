@@ -8,6 +8,7 @@ import {
   Label,
   TextField,
   Toast,
+  
 } from "@heroui/react";
 
 import Link from "next/link";
@@ -34,15 +35,16 @@ export default function SignUpPage() {
     });
 
     if (error) {
-      toast.error("Signup failed ❌");
+      Toast.error("Signup failed ❌");
       return;
     }
 
-    toast.success("Account created successfully ✅");
+    Toast.success("Account created successfully ✅");
 
-    // 🔥 signup এর পরে signin page এ নিয়ে যাবে
+   
     router.push("/signin");
   };
+
 
   return (
     <Card className="border mx-auto w-96 py-10 mt-5">
