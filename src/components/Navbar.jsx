@@ -54,14 +54,14 @@ const Navbar = () => {
         {/* Auth */}
         <div className="hidden md:flex gap-4 text-sm">
           <Link
-            href="/sign-up"
-            className={linkClass("/sign-up")}
+            href={"/signup"}
+            className={linkClass("/signup")}
           >
             Register
           </Link>
           <Link
-            href="/sign-in"
-            className={linkClass("/sign-in")}
+            href="/signin"
+            className={linkClass("/signin")}
           >
             Login
           </Link>
@@ -106,9 +106,9 @@ const Navbar = () => {
           <hr />
 
           <Link
-            href="/sign-up"
+            href="/signup"
             onClick={() => setOpen(false)}
-            className={linkClass("/sign-up")}
+            className={linkClass("/signup")}
           >
             Register
           </Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
           <Link
             href="/sign-in"
             onClick={() => setOpen(false)}
-            className={linkClass("/sign-in")}
+            className={linkClass("/signin")}
           >
             Login
           </Link>

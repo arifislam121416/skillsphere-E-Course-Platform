@@ -1,53 +1,57 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
 import {
   Button,
   Card,
-  Description,
-  FieldError,
-  Form,
   Input,
   Label,
   TextField,
+  Toast,
 } from "@heroui/react";
+
 import Link from "next/link";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
+
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const form = new FormData(e.currentTarget);
-
-    const name = form.get("name");
-    const image = form.get("image");
-    const email = form.get("email");
-    const password = form.get("password");
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
     const { data, error } = await authClient.signUp.email({
       name,
       image,
       email,
       password,
-      callbackURL: "/sign-in"
     });
- 
 
     if (error) {
-     toast.error(error);
+      toast.error("Signup failed ❌");
       return;
     }
 
-    window.location.href = "/sign-in";
+    toast.success("Account created successfully ✅");
+
+    // 🔥 signup এর পরে signin page এ নিয়ে যাবে
+    router.push("/signin");
   };
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
+    <Card className="border mx-auto w-96 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Register</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <form
+        className="flex w-80 mx-auto flex-col gap-4 mt-4"
+        onSubmit={onSubmit}
+      >
         <TextField isRequired name="name">
           <Label>Name</Label>
           <Input />
@@ -68,23 +72,18 @@ export default function SignUpPage() {
           <Input type="password" />
         </TextField>
 
-        <div className="flex gap-2">
-        <Link href={"/sign-in"}>
-          <Button>
-           
-            Submit
-          </Button>
-        </Link>
+        <Button type="submit" className="bg-blue-500 text-white">
+          Submit
+        </Button>
 
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
-        </div>
+        <Button type="reset" variant="secondary">
+          Reset
+        </Button>
 
-        <Link href="/sign-in" className="text-center text-blue-500">
+        <Link href="/signin" className="text-center text-blue-500">
           Already have account? Login
         </Link>
-      </Form>
+      </form>
     </Card>
   );
 }
