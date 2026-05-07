@@ -1,11 +1,14 @@
 "use client";
 
 
-import { useSession } from "@/lib/auth-client";
+import { UpdateUserModal } from "@/components/UpdateProfile";
+import { authClient, useSession } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 
 const MyProfile = () => {
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
   const { data: session, isLoading } = useSession()
 
   if (isLoading) {
@@ -30,13 +33,13 @@ const MyProfile = () => {
     );
   }
 
-  const user = session.user;
+ 
 
   return (
     <div className="max-w-3xl mx-auto p-6">
       <div className="bg-white shadow-md rounded-xl p-6 flex flex-col items-center gap-4">
 
-        {/* Avatar */}
+       
         <Image
           src={user.image || "https://i.ibb.co/4pDNDk1/avatar.png"}
           alt="profile"
@@ -45,19 +48,18 @@ const MyProfile = () => {
           className="rounded-full"
         />
 
-        {/* Name */}
+       
         <h2 className="text-2xl font-bold">{user.name}</h2>
 
-        {/* Email */}
         <p className="text-gray-600">{user.email}</p>
 
-        {/* Extra Info Card */}
+      
         <div className="w-full mt-4 border rounded-lg p-4 text-sm text-gray-700">
           <p><span className="font-semibold">User ID:</span> {user.id}</p>
           <p><span className="font-semibold">Role:</span> {user.role || "user"}</p>
         </div>
 
-        {/* Action Buttons */}
+       
         <div className="flex gap-3 mt-4">
           <Link
             href="/courses"
@@ -72,7 +74,9 @@ const MyProfile = () => {
           >
             Home
           </Link>
+         
         </div>
+         <UpdateUserModal/>
       </div>
     </div>
   );
