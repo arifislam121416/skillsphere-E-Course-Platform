@@ -74,13 +74,15 @@ export default function SignUpPage() {
           <Input type="password" />
         </TextField>
 
-        <Button type="submit" className="bg-blue-500 text-white">
+        <div className="flex gap-4 items-center justify-center">
+          <Button type="submit" className="bg-blue-500 text-white">
           Submit
         </Button>
 
         <Button type="reset" variant="secondary">
           Reset
         </Button>
+        </div>
 
         <Link href="/signin" className="text-center text-blue-500">
           Already have account? Login
