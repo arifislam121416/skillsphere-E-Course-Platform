@@ -7,13 +7,14 @@ import {
   Input,
   Label,
   TextField,
-  Toast,
+ 
   
 } from "@heroui/react";
 
 import Link from "next/link";
-import { toast } from "react-toastify";
+
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
 
@@ -35,11 +36,11 @@ export default function SignUpPage() {
     });
 
     if (error) {
-      Toast.error("Signup failed ❌");
+      toast.error("Signup failed ❌");
       return;
     }
 
-    Toast.success("Account created successfully ✅");
+    toast.success("Account created successfully ✅");
 
    
     router.push("/signin");

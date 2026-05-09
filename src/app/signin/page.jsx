@@ -21,24 +21,29 @@ const LoginPage = () => {
       await authClient.signIn.email({
         email: form.get("email"),
         password: form.get("password"),
-        callbackURL: redirect, 
+        
       });
 
       toast.success("Login successful ✅");
 
-     
+      router.push(redirect);
     } catch (error) {
       console.error(error);
       toast.error("Login failed ❌");
     }
   };
 
-  const handleGoogleSignin = async ()=> {
+ const handleGoogleSignin = async () => {
+  try {
     await authClient.signIn.social({
-      provider: 'google'
-    })
+      provider: "google",
+    });
 
+    router.push(redirect);
+  } catch (error) {
+    toast.error("Google login failed ❌");
   }
+};
   return (
     <form
       onSubmit={handleLogin}

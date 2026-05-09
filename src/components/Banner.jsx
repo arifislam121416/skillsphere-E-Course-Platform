@@ -10,9 +10,7 @@ const Banner = async () => {
 
   const courseData = data.slice(0, 3);
 
-  const trendingCourses = [...data]
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, 6);
+  
 
   return (
     <div className="container mx-auto px-4">
